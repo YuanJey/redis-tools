@@ -14,7 +14,7 @@ var RedisDB *Redis
 func init() {
 	RedisDB = &Redis{}
 	RedisDB.RDB = go_redis.NewClient(&go_redis.Options{
-		Addr:     config.ServerConfig.Redis.DBAddress[0],
+		Addr:     config.ServerConfig.Redis.DBAddress,
 		Username: config.ServerConfig.Redis.DBUserName,
 		Password: config.ServerConfig.Redis.DBPassWord, // no password set
 		DB:       0,                                    // use default DB
